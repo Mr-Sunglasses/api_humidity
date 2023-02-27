@@ -2,7 +2,9 @@ from flask import Flask, render_template
 from bs4 import BeautifulSoup
 import requests
 
-my_webpage = requests.get('http://127.0.0.1:5000/')
+# my_webpage = requests.get('http://127.0.0.1:5000/')
+my_webpage = requests.get('https://fluffy-bubblegum-36cf63.netlify.app/')
+
 
 my_webpage_data = my_webpage.text
 
