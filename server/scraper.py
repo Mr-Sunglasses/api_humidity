@@ -6,4 +6,4 @@ app = Flask(__name__)
 def home():
     return render_template('renderer.html')
 
-app.run(debug=True)
+app.run(port=5000, debug=True)
