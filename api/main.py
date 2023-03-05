@@ -17,7 +17,8 @@ app = Flask(__name__)
 @app.route('/temperature', methods = ['GET', 'POST'])
 def home():
     if(request.method == 'GET'):
-        my_webpage = requests.get('https://fluffy-bubblegum-36cf63.netlify.app/')
+        my_webpage = requests.get('http://127.0.0.1:5000/')
+        # my_webpage = requests.get('https://fluffy-bubblegum-36cf63.netlify.app/')
         my_webpage_data = my_webpage.text
         my_soup = BeautifulSoup(my_webpage_data, 'html.parser')
         get_temperature = (my_soup.find(id="temperature").get_text())
